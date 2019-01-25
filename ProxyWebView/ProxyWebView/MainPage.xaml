@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:ProxyWebView.Htttp; assembly=ProxyWebView"
+             x:Class="ProxyWebView.MainPage">
+
+    <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+        <Label Text="Teste"/>
+        <!--Generic webview-->
+        <!--<WebView HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="AliceBlue" x:Name="webview"/>-->
+
+        <local:HybridWebView 
+            x:Name="hwebview" 
+            x:Uid="hwebview"
+            HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"/>
+
+        <!--Its possible use the webview with viewmodels
+        <local:HybridWebView 
+            x:Name="hwebview" 
+            x:Uid="hwebview" 
+            Grid.Row="1" 
+            Source="{Binding PageUri}" 
+            Username="{Binding Username}" 
+            Password="{Binding Password}" />-->
+    </StackLayout>
+
+</ContentPage>
